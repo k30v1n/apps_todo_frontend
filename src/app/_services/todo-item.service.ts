@@ -10,7 +10,9 @@ import { TodoItem, TodoItemAdd } from "../_models/todo-item";
 })
 export class TodoItemService {
 
-  private todoApiUrl = 'http://localhost:5000/v1/todo';
+  //private todoApiUrl = 'http://localhost:5000/v1/todo';
+  // TODO: get it from envvariable
+  private todoApiUrl = 'https://github-k30v1n-apps-todo-backend-xjta5vdj7q-rj.a.run.app/v1/todo';
 
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
