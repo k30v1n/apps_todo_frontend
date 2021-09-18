@@ -14,3 +14,6 @@
 .gitignore
 
 # Node.js dependencies:
+node_modules/
+e2e/
+src/

@@ -1,8 +1,16 @@
-runtime: nodejs16
+# Google Cloud App yaml file - definitions for managed service cloud app engine
+runtime: python27
 
 instance_class: F1
 
 service: todoapp
+
+handlers:
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
+- url: /
+  static_dir: dist
 
 # https://cloud.google.com/appengine/docs/standard/nodejs/config/appref#automatic_scaling
 automatic_scaling:
