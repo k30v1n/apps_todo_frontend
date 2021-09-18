@@ -1,12 +1,11 @@
-FROM node:16 as node
-
+FROM node:16 as build
+RUN mkdir -p /app
 WORKDIR /app
+COPY package.json package-lock.json /app/
+RUN npm install
+COPY . /app
+RUN npm run build --prod
 
-COPY package*.json ./
-
-RUN npm install -g @angular/cli @angular-devkit/build-angular && npm install
-
-COPY . .
-
-EXPOSE 4201
-CMD [ "npm", "run", "start" ]
+FROM nginx:1.21.3-alpine as runtime
+COPY --from=build /app/dist/todoapp /usr/share/nginx/html
+EXPOSE 80
