@@ -2,7 +2,7 @@ runtime: nodejs16
 
 instance_class: F1
 
-service: todo_app_frontend
+service: todoapp
 
 # https://cloud.google.com/appengine/docs/standard/nodejs/config/appref#automatic_scaling
 automatic_scaling:
