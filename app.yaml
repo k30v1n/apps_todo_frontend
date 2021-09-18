@@ -1,5 +1,7 @@
 # Google Cloud App yaml file - definitions for managed service cloud app engine
 runtime: python27
+api_version: 1
+threadsafe: true
 
 instance_class: F1
 
