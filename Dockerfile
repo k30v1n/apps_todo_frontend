@@ -9,3 +9,4 @@ RUN npm run build --prod
 FROM nginx:1.21.3-alpine as runtime
 COPY --from=build /app/dist/todoapp /usr/share/nginx/html
 EXPOSE 80
+EXPOSE 443
