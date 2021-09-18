@@ -1,0 +1,12 @@
+runtime: nodejs16
+
+instance_class: F1
+
+service: todo_app_frontend
+
+# https://cloud.google.com/appengine/docs/standard/nodejs/config/appref#automatic_scaling
+automatic_scaling:
+    target_cpu_utilization: 0.8 # start new instance on 80% of cpu  
+    max_instances: 5 # zero disables the setting
+    min_instances: 0 # Note that you are charged for the number of instances specified whether they are receiving traffic or not
+    max_concurrent_requests: 50 # The number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance

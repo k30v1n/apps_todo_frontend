@@ -1,4 +1,4 @@
-FROM node:12 as node
+FROM node:16 as node
 
 WORKDIR /app
 
