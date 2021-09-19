@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'To-do App';
-  subtitle = 'Application to manage your todo tasks'
+  subtitle = 'Application to manage your todo tasks :)'
 }
